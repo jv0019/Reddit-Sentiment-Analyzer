@@ -5,9 +5,9 @@ from textblob import TextBlob
 import streamlit as st
 import pandas as pd
 
-client_id = os.getenv('REDDIT_CLIENT_ID')
-client_secret = os.getenv('REDDIT_CLIENT_SECRET')
-user_agent = os.getenv('REDDIT_USER_AGENT')
+client_id = st.secrets["REDDIT_CLIENT_ID"]
+client_secret = st.secrets["REDDIT_CLIENT_SECRET"]
+user_agent = st.secrets["REDDIT_USER_AGENT"]
 
 # PRAW
 reddit = praw.Reddit(
@@ -140,4 +140,5 @@ try:
                    
 except Exception as e:
     st.write(f"An error occurred: {e}")
+
 
