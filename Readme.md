@@ -4,7 +4,7 @@ An interactive web application that analyzes sentiment across Reddit communities
 
 Built with **Python**, **Streamlit**, **PRAW**, and **TextBlob**, the application retrieves live Reddit posts, performs natural language sentiment analysis, and visualizes community sentiment through an intuitive dashboard.
 
-🚀 **Live Demo:** *Add your deployment URL here*
+🚀 **Live Demo:** *[Reddit-Sentiment-Analyzer](https://reddit-sentiment-1.streamlit.app/)*
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
