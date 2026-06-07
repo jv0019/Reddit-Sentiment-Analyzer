@@ -1,105 +1,170 @@
-# Reddit Sentiment Analyzer
+# 📊 Reddit Sentiment Analyzer
 
-A Python web application that analyzes the sentiment of posts from any subreddit.  
-The app fetches recent Reddit posts using the Reddit API, performs sentiment analysis on the content, and visualizes the results through an interactive dashboard.
+An interactive web application that analyzes sentiment across Reddit communities in real time.
 
-The application is built with Streamlit, making it easy to explore sentiment trends across Reddit communities.
+Built with **Python**, **Streamlit**, **PRAW**, and **TextBlob**, the application retrieves live Reddit posts, performs natural language sentiment analysis, and visualizes community sentiment through an intuitive dashboard.
 
----
+🚀 **Live Demo:** *Add your deployment URL here*
 
-## Overview
-
-This tool retrieves recent posts from a specified subreddit and evaluates the sentiment of each post using natural language processing.
-
-The results are categorized into:
-
-- Positive posts
-- Negative posts
-- Neutral posts
-
-It also calculates summary statistics and displays a visual breakdown of sentiment distribution.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Reddit API](https://img.shields.io/badge/API-Reddit-orange)
+![NLP](https://img.shields.io/badge/NLP-Sentiment_Analysis-green)
 
 ---
 
-## Features
+## 🚀 Overview
 
-- Fetches recent Reddit posts using the Reddit API
-- Performs sentiment analysis on post titles and text
-- Calculates sentiment polarity and subjectivity
-- Displays summary statistics
-- Visualizes sentiment distribution with charts
-- Allows users to view posts grouped by sentiment
-- Interactive interface built with Streamlit
+Reddit hosts millions of discussions spanning technology, finance, gaming, politics, business, and countless other topics.
 
----
+This application enables users to:
 
-## Tech Stack
+* Analyze sentiment within any subreddit
+* Measure community positivity or negativity
+* Explore discussion trends
+* Visualize sentiment distribution
+* Examine individual posts by sentiment category
 
-- **Python**
-- **PRAW** – Reddit API wrapper
-- **TextBlob** – Sentiment analysis
-- **Streamlit** – Interactive web interface
-- **Pandas** – Data handling
-- **Datetime** – Timestamp processing
+The system fetches live Reddit content, performs sentiment analysis using natural language processing techniques, and presents the results through an interactive dashboard.
 
 ---
 
-## How It Works
+## ✨ Features
 
-1. The user enters a subreddit name.
-2. The application fetches recent posts using the Reddit API.
-3. Each post's title and text are combined and analyzed using TextBlob.
-4. Sentiment polarity and subjectivity scores are calculated.
-5. Posts are categorized as:
-   - Positive
-   - Negative
-   - Neutral
-6. The application generates summary statistics and visualizations.
+### 🔴 Live Reddit Data
+
+* Fetches recent posts from any public subreddit
+* Connects directly to the Reddit API using PRAW
+* Supports configurable post limits
+
+### 🧠 Sentiment Analysis
+
+* Analyzes titles and post content
+* Calculates sentiment polarity scores
+* Calculates subjectivity scores
+* Classifies posts into:
+
+  * Positive
+  * Negative
+  * Neutral
+
+### 📊 Interactive Dashboard
+
+* Real-time sentiment statistics
+* Sentiment distribution visualizations
+* Community-level sentiment overview
+* Interactive filtering and exploration
+
+### 📈 Data Insights
+
+* Total posts analyzed
+* Average sentiment score
+* Average subjectivity score
+* Positive/Negative/Neutral breakdown
+
+### 📋 Post-Level Analysis
+
+* Browse posts grouped by sentiment
+* Identify highly positive discussions
+* Discover controversial or negative topics
+* Explore subreddit mood patterns
 
 ---
 
-## Example Output
+## 🎯 Business Value
 
-The dashboard displays:
+This project demonstrates how publicly available social media data can be transformed into actionable insights.
 
-- Total number of posts analyzed
-- Number of positive, negative, and neutral posts
-- Average sentiment polarity
-- Average subjectivity score
-- Bar chart showing sentiment distribution
-- Tables listing posts by sentiment category
+Potential applications include:
+
+* Brand sentiment monitoring
+* Market research
+* Community engagement analysis
+* Product feedback tracking
+* Public opinion analysis
+* Trend monitoring
+* Social listening
 
 ---
 
-## Installation
+## 🏗 System Architecture
 
-Clone the repository:
+```text id="u5ayqf"
+User
+ │
+ ▼
+Streamlit Dashboard
+ │
+ ▼
+Reddit API (PRAW)
+ │
+ ▼
+Post Collection
+ │
+ ▼
+TextBlob NLP Engine
+ │
+ ▼
+Sentiment Classification
+ │
+ ▼
+Visual Analytics Dashboard
+```
 
-```bash
+---
+
+## 🛠 Technology Stack
+
+| Component          | Technology       |
+| ------------------ | ---------------- |
+| Frontend           | Streamlit        |
+| Language           | Python           |
+| Reddit Integration | PRAW             |
+| NLP                | TextBlob         |
+| Data Processing    | Pandas           |
+| Date Handling      | Datetime         |
+| Visualization      | Streamlit Charts |
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash id="q73vbp"
 git clone https://github.com/jv0019/reddit-sentiment-analyzer.git
 cd reddit-sentiment-analyzer
 ```
 
-Install dependencies:
+### Install Dependencies
 
-```bash
+```bash id="m7q2qq"
 pip install -r requirements.txt
 ```
 
 ---
 
-## Reddit API Setup
+## 🔑 Reddit API Configuration
 
-To use the Reddit API, you need API credentials.
+To access Reddit data, create API credentials.
 
-1. Go to:  
+### Step 1: Create a Reddit App
+
+Visit:
+
+```text id="7rq37h"
 https://www.reddit.com/prefs/apps
-
-2. Create a new application.
-
-3. Set environment variables on your system:
-
 ```
+
+Create a new application and note:
+
+* Client ID
+* Client Secret
+* User Agent
+
+### Step 2: Configure Environment Variables
+
+```env id="0rn45l"
 REDDIT_CLIENT_ID=your_client_id
 REDDIT_CLIENT_SECRET=your_client_secret
 REDDIT_USER_AGENT=your_user_agent
@@ -107,55 +172,137 @@ REDDIT_USER_AGENT=your_user_agent
 
 ---
 
-## Running the Application
+## ▶️ Running the Application
 
-Start the Streamlit app:
+Launch the Streamlit application:
 
-```bash
+```bash id="wfrg68"
 streamlit run main.py
 ```
 
-Then open the provided local URL in your browser.
+The application will open in your browser automatically.
 
----
+Default local address:
 
-## Usage
-
-1. Enter a **subreddit name** (e.g., `technology`, `python`, `news`)
-2. Select the **number of posts** to analyze
-3. Click **Scrape**
-4. View the sentiment summary and charts
-5. Select a sentiment category to list corresponding posts
-
----
-
-## Project Structure
-
+```text id="2lbttq"
+http://localhost:8501
 ```
-reddit-sentiment-analyzer
+
+---
+
+## 📖 Usage
+
+### Analyze a Subreddit
+
+1. Enter a subreddit name
+2. Select the number of posts to analyze
+3. Click **Analyze**
+4. Review sentiment statistics
+5. Explore visualizations
+6. Inspect posts by sentiment category
+
+### Example Subreddits
+
+```text id="42i1ph"
+technology
+python
+news
+datascience
+artificial
+machinelearning
+stocks
+worldnews
+```
+
+---
+
+## 📊 Metrics Generated
+
+### Sentiment Metrics
+
+| Metric             | Description                             |
+| ------------------ | --------------------------------------- |
+| Polarity           | Measures positive vs negative sentiment |
+| Subjectivity       | Measures opinion vs factual content     |
+| Sentiment Category | Positive, Negative, or Neutral          |
+
+### Dashboard Statistics
+
+* Total Posts Analyzed
+* Positive Post Count
+* Negative Post Count
+* Neutral Post Count
+* Average Polarity
+* Average Subjectivity
+
+---
+
+## 📂 Project Structure
+
+```text id="g4xh8k"
+reddit-sentiment-analyzer/
 │
 ├── main.py
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## Example Use Cases
+## 💡 Example Use Cases
 
-- Track community sentiment about a topic
-- Analyze public opinion on news or products
-- Monitor subreddit trends
-- Explore sentiment patterns in online discussions
+### Business & Marketing
+
+* Brand monitoring
+* Product launch feedback
+* Competitor sentiment tracking
+
+### Research
+
+* Social media analytics
+* Community behavior analysis
+* Trend detection
+
+### Personal Exploration
+
+* Monitor favorite communities
+* Compare subreddit sentiment
+* Discover discussion trends
 
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
-Potential improvements include:
+Planned enhancements:
 
-- Sentiment trend tracking over time
-- Word frequency analysis
-- Keyword filtering
-- More advanced NLP models (e.g., VADER or transformers)
-- Export results to CSV
+* [ ] Sentiment tracking over time
+* [ ] Word frequency analysis
+* [ ] Keyword filtering
+* [ ] Topic modeling
+* [ ] Export results to CSV
+* [ ] Historical subreddit comparison
+* [ ] VADER sentiment analysis
+* [ ] Transformer-based NLP models
+* [ ] AI-generated sentiment summaries
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 👤 Author
+
+**Jivitesh Sachdev**
+
+Software Development • Data Analytics • NLP • AI Applications
+
+GitHub: https://github.com/jv0019
+
+---
+
+### Keywords
+
+Python • NLP • Sentiment Analysis • Reddit API • Streamlit • Data Analytics • Social Media Analytics • TextBlob • Data Visualization • Natural Language Processing • Dashboard Development
